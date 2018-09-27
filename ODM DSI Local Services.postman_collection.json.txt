@@ -1,0 +1,420 @@
+{
+	"info": {
+		"_postman_id": "9116cda7-aa54-41ac-a17f-efc93a66066e",
+		"name": "ODM DSI Local Services",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Local-New Customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"$class\": \"com.mbfs.omnichannel.model.NewCustomer\",\r\n\t\"partyIdentifier\": {\r\n\t\t\t\"id\": \"566752594133675301\",\r\n\t\t\t\"idType\": \"ContId\"\r\n\t\t}\r\n}"
+				},
+				"url": {
+					"raw": "http://sfdct525w002.usfdc.corpintra.net:6080/ODM/MBFSOmnichannel/events",
+					"protocol": "http",
+					"host": [
+						"sfdct525w002",
+						"usfdc",
+						"corpintra",
+						"net"
+					],
+					"port": "6080",
+					"path": [
+						"ODM",
+						"MBFSOmnichannel",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local-AccountChannelLogin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n  \"$class\": \"com.mbfs.omnichannel.model.AccountChannelLogin\", \r\n  \"eventData\": { \r\n    \"systemId\": \"M1165\", \r\n    \"chnlAppType\": \"web\", \r\n    \"sourceIPAddress\": \"53.203.88.123\", \r\n    \"geolocation\": { \r\n      \"latitude\": 37.4442, \r\n      \"longitude\": -122.08585 \r\n    }, \r\n    \"eventDateTime\": \"2018-03-23T15:35:08.155Z\", \r\n    \"channelTransactionId\": \"7259752603623624\", \r\n    \"scheduleIdentifier\": { \r\n      \"agreementNumber\": \"5000550756\", \r\n      \"scheduleNumber\": \"1\" \r\n    }, \r\n    \"vehicleIdentifier\": \"1HGBH41JXMN109186\", \r\n    \"eventType\": \"AccountChannelLogin\", \r\n    \"eventResourceType\": \"account\", \r\n    \"partyIdentifiers\": [ \r\n      { \r\n        \"id\": \"1234\", \r\n        \"idType\": \"UCID\" \r\n      }, \r\n{ \r\n        \"id\": \"1234\", \r\n        \"idType\": \"UCID\" \r\n      } \r\n    ], \r\n   \"cdmActionTransactionIds\": [ \r\n      { \r\n        \"actionId\": \"7259752603623624\" \r\n      }, \r\n      { \r\n        \"actionId\": \"7259752603623625\" \r\n      } \r\n    ], \r\n   \"eventContexts\": [ \r\n      { \r\n        \"contextKey\": \"Contract-Lease-Expiry-Flag\", \r\n        \"contextValue\": \"False\" \r\n      }, \r\n      { \r\n        \"contextKey\": \"Contract-Lease-Expiry-Flag\", \r\n        \"contextValue\": \"False\" \r\n      } \r\n    ], \r\n    \"eventObject\": \"{'complexContext': 'Any JSON for capturing any additional input'}\" \r\n  } \r\n} "
+				},
+				"url": {
+					"raw": "http://sfdct525w002.usfdc.corpintra.net:7080/ODM/MBFSOmnichannel/events",
+					"protocol": "http",
+					"host": [
+						"sfdct525w002",
+						"usfdc",
+						"corpintra",
+						"net"
+					],
+					"port": "7080",
+					"path": [
+						"ODM",
+						"MBFSOmnichannel",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local-AccountChannelLogin Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n  \"$class\": \"com.mbfs.omnichannel.model.AccountChannelLogin\", \r\n  \"eventData\": { \r\n    \"systemId\": \"A5361\", \r\n    \"chnlAppType\": \"ivr\", \r\n    \"sourceIPAddress\": \"53.203.88.123\", \r\n    \"geolocation\": { \r\n      \"latitude\": 37.4442, \r\n      \"longitude\": -122.08585 \r\n    }, \r\n    \"eventDateTime\": \"2018-03-23T15:35:08.155Z\", \r\n    \"channelTransactionId\": \"7259752603623624\", \r\n    \"scheduleIdentifier\": { \r\n      \"agreementNumber\": \"5000590099\", \r\n      \"scheduleNumber\": \"1\" \r\n    }, \r\n    \"vehicleIdentifier\": \"1HGBH41JXMN109186\", \r\n    \"eventType\": \"AccountChannelLogin\", \r\n    \"eventResourceType\": \"account\", \r\n    \"partyIdentifiers\": [ \r\n      { \r\n        \"id\": \"1234\", \r\n        \"idType\": \"UCID\" \r\n      }, \r\n{ \r\n        \"id\": \"1234\", \r\n        \"idType\": \"UCID\" \r\n      } \r\n    ], \r\n   \"cdmActionTransactionIds\": [ \r\n      { \r\n        \"actionId\": \"7259752603623624\" \r\n      }, \r\n      { \r\n        \"actionId\": \"7259752603623625\" \r\n      } \r\n    ], \r\n   \"eventContexts\": [ \r\n      { \r\n        \"contextKey\": \"Contract-Lease-Expiry-Flag\", \r\n        \"contextValue\": \"False\" \r\n      }, \r\n      { \r\n        \"contextKey\": \"Contract-Lease-Expiry-Flag\", \r\n        \"contextValue\": \"False\" \r\n      } \r\n    ], \r\n    \"eventObject\": \"{'complexContext': 'Any JSON for capturing any additional input'}\" \r\n  } \r\n} "
+				},
+				"url": {
+					"raw": "http://sfdct525w002.usfdc.corpintra.net:7080/ODM/MBFSOmnichannel/events",
+					"protocol": "http",
+					"host": [
+						"sfdct525w002",
+						"usfdc",
+						"corpintra",
+						"net"
+					],
+					"port": "7080",
+					"path": [
+						"ODM",
+						"MBFSOmnichannel",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local-RecentPaymentNotificationAck",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"$class\": \"com.mbfs.omnichannel.model.RecentPaymentNotifcationAck\",\r\n\t\"eventData\": {\r\n\t\t\"systemId\": \"A5361\",\r\n\t\t\"chnlAppType\": \"ivr\",\r\n\t\t\"sourceIPAddress\": \"53.203.88.123\",\r\n\t\t\"geolocation\": {\r\n\t\t\t\"latitude\": 37.4442,\r\n\t\t\t\"longitude\": -122.08585\r\n\t\t},\r\n\t\t\"eventType\": \"RecentPaymentNotifcationAck\",\r\n\t\t\"eventResourceType\": \"account\",\r\n\t\t\"eventDateTime\": \"2018-03-23T15:35:08.155Z\",\r\n\t\t\"channelTransactionId\": \"1234\",\r\n\t\t\"cdmActionTransactionIds\": [],\r\n\t\t\"scheduleIdentifier\": {\r\n\t\t\t\"agreementNumber\": \"5000351877\",\r\n\t\t\t\"scheduleNumber\": \"1\"\r\n\t\t},\r\n\t\t\"partyIdentifiers\": [{\r\n\t\t\t\"id\": \"\",\r\n\t\t\t\"idType\": \"MBID\"\r\n\t\t}],\r\n\t\t\"vehicleIdentifier\": \"\",\r\n\t\t\"eventContexts\": [],\r\n\t\t\"eventObject\": \"\"\r\n\t}\r\n}"
+				},
+				"url": {
+					"raw": "http://sfdct525w002.usfdc.corpintra.net:7080/ODM/MBFSOmnichannel/events",
+					"protocol": "http",
+					"host": [
+						"sfdct525w002",
+						"usfdc",
+						"corpintra",
+						"net"
+					],
+					"port": "7080",
+					"path": [
+						"ODM",
+						"MBFSOmnichannel",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local-RecentPaymentNotificationAck Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"$class\":\"com.mbfs.omnichannel.model.RecentPaymentNotifcationAck\",\"eventData\":{\"cdmActionTransactionIds\":[],\"partyIdentifiers\":[],\"eventContexts\":[],\"eventResourceType\":\"account\",\"geolocation\":{\"longitude\":0.0,\"latitude\":0.0},\"eventDateTime\":\"2018-05-31T16:16:24.815Z\",\"sourceIPAddress\":\"\",\"eventObject\":\"\",\"eventType\":\"RecentPaymentNotifcationAck\",\"channelTransactionId\":\"9976073844681134\",\"systemId\":\"A4519\",\"vehicleIdentifier\":\"\",\"chnlAppType\":\"api\",\"scheduleIdentifier\":{\"scheduleNumber\":\"001\",\"agreementNumber\":\"7004681134\"}}}"
+				},
+				"url": {
+					"raw": "http://sfdct525w002.usfdc.corpintra.net:6080/ODM/MBFSOmnichannel/events",
+					"protocol": "http",
+					"host": [
+						"sfdct525w002",
+						"usfdc",
+						"corpintra",
+						"net"
+					],
+					"port": "6080",
+					"path": [
+						"ODM",
+						"MBFSOmnichannel",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local-UpdateCustomer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"$class\": \"com.mbfs.omnichannel.model.UpdateCustomer\",\r\n\t\"partyIdentifier\":  {\r\n\t\t\t\"id\": \"252353399857882001\",\r\n\t\t\t\"idType\": \"ContId\"\r\n\t\t}\r\n}"
+				},
+				"url": {
+					"raw": "http://sfdct525w002.usfdc.corpintra.net:7080/ODM/MBFSOmnichannel/events",
+					"protocol": "http",
+					"host": [
+						"sfdct525w002",
+						"usfdc",
+						"corpintra",
+						"net"
+					],
+					"port": "7080",
+					"path": [
+						"ODM",
+						"MBFSOmnichannel",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local-UpdateCustomer Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"$class\": \"com.mbfs.omnichannel.model.UpdateCustomer\",\r\n\t\"partyIdentifier\": {\r\n\t\t\t\"id\": \"744653050588389301\",\r\n\t\t\t\"idType\": \"ContId\"\r\n\t\t}\r\n}"
+				},
+				"url": {
+					"raw": "http://sfdct525w002.usfdc.corpintra.net:7080/ODM/MBFSOmnichannel/events",
+					"protocol": "http",
+					"host": [
+						"sfdct525w002",
+						"usfdc",
+						"corpintra",
+						"net"
+					],
+					"port": "7080",
+					"path": [
+						"ODM",
+						"MBFSOmnichannel",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local-Reload Contract",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"$class\": \"com.mbfs.omnichannel.model.UpdateCustomerTrigger\",\r\n\t\"activate\":true\r\n}"
+				},
+				"url": {
+					"raw": "http://sfdct525w002.usfdc.corpintra.net:7080/ODM/MBFSOmnichannel/events",
+					"protocol": "http",
+					"host": [
+						"sfdct525w002",
+						"usfdc",
+						"corpintra",
+						"net"
+					],
+					"port": "7080",
+					"path": [
+						"ODM",
+						"MBFSOmnichannel",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local-PayoffQuoteRegenerateNotificationAck",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"$class\": \"com.mbfs.omnichannel.model.PayoffQuoteRegenerateNotifcationAck\",\r\n\t\"eventData\": {\r\n\t\t\"systemId\": \"A5361\",\r\n\t\t\"chnlAppType\": \"ivr\",\r\n\t\t\"sourceIPAddress\": \"53.203.88.123\",\r\n\t\t\"geolocation\": {\r\n\t\t\t\"latitude\": 37.4442,\r\n\t\t\t\"longitude\": -122.08585\r\n\t\t},\r\n\t\t\"eventType\": \"PayoffQuoteRegenerateNotifcationAck\",\r\n\t\t\"eventResourceType\": \"account\",\r\n\t\t\"eventDateTime\": \"2018-03-23T15:35:08.155Z\",\r\n\t\t\"channelTransactionId\": \"1234\",\r\n\t\t\"cdmActionTransactionIds\": [],\r\n\t\t\"scheduleIdentifier\": {\r\n\t\t\t\"agreementNumber\": \"1015682211\",\r\n\t\t\t\"scheduleNumber\": \"1\"\r\n\t\t},\r\n\t\t\"partyIdentifiers\": [{\r\n\t\t\t\"id\": \"\",\r\n\t\t\t\"idType\": \"MBID\"\r\n\t\t}],\r\n\t\t\"vehicleIdentifier\": \"\",\r\n\t\t\"eventContexts\": [],\r\n\t\t\"eventObject\": \"\"\r\n\t}\r\n}"
+				},
+				"url": {
+					"raw": "http://sfdct525w002.usfdc.corpintra.net:6080/ODM/MBFSOmnichannel/events",
+					"protocol": "http",
+					"host": [
+						"sfdct525w002",
+						"usfdc",
+						"corpintra",
+						"net"
+					],
+					"port": "6080",
+					"path": [
+						"ODM",
+						"MBFSOmnichannel",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local-CustomerContactInbound",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n  \"$class\": \"com.mbfs.omnichannel.model.CustomerContactInbound\", \r\n  \"eventData\": { \r\n    \"systemId\": \"A5361\", \r\n    \"chnlAppType\": \"ivr\", \r\n    \"sourceIPAddress\": \"53.203.88.123\", \r\n    \"geolocation\": { \r\n      \"latitude\": 37.4442, \r\n      \"longitude\": -122.08585 \r\n    }, \r\n    \"eventDateTime\": \"2018-03-23T15:35:08.155Z\", \r\n    \"channelTransactionId\": \"7259752603623624\", \r\n    \"scheduleIdentifier\": { \r\n      \"agreementNumber\": \"1015682211\", \r\n      \"scheduleNumber\": \"1\" \r\n    }, \r\n    \"vehicleIdentifier\": \"1HGBH41JXMN109186\", \r\n    \"eventType\": \"CustomerContactInbound\", \r\n    \"eventResourceType\": \"account\", \r\n    \"partyIdentifiers\": [ \r\n      { \r\n        \"id\": \"1234\", \r\n        \"idType\": \"UCID\" \r\n      }, \r\n{ \r\n        \"id\": \"1234\", \r\n        \"idType\": \"UCID\" \r\n      } \r\n    ], \r\n   \"cdmActionTransactionIds\": [ \r\n      { \r\n        \"actionId\": \"7259752603623624\" \r\n      }, \r\n      { \r\n        \"actionId\": \"7259752603623625\" \r\n      } \r\n    ], \r\n   \"eventContexts\": [ \r\n      { \r\n        \"contextKey\": \"Contract-Lease-Expiry-Flag\", \r\n        \"contextValue\": \"False\" \r\n      }, \r\n      { \r\n        \"contextKey\": \"Contract-Lease-Expiry-Flag\", \r\n        \"contextValue\": \"False\" \r\n      } \r\n    ], \r\n    \"eventObject\": \"{'complexContext': 'Any JSON for capturing any additional input'}\" \r\n  } \r\n} "
+				},
+				"url": {
+					"raw": "http://sfdct525w002.usfdc.corpintra.net:6080/ODM/MBFSOmnichannel/events",
+					"protocol": "http",
+					"host": [
+						"sfdct525w002",
+						"usfdc",
+						"corpintra",
+						"net"
+					],
+					"port": "6080",
+					"path": [
+						"ODM",
+						"MBFSOmnichannel",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Local-AccountChannelLogin",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "odmdsiusr1",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "odmdsiusr",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"$class\": \"com.mbfs.omnichannel.model.AccountChannelLogin\",\n\t\"eventData\": {\n\t\t\"systemId\": \"A5361\",\n\t\t\"chnlAppType\": \"ivr\",\n\t\t\"sourceIPAddress\": \"53.203.88.123\",\n\t\t\"geolocation\": {\n\t\t\t\"latitude\": 37.4442,\n\t\t\t\"longitude\": -122.08585\n\t\t},\n\t\t\"eventType\": \"AccountChannelLogin\",\n\t\t\"eventResourceType\": \"account\",\n\t\t\"eventDateTime\": \"2018-03-23T15:35:08.155Z\",\n\t\t\"channelTransactionId\": \"1234\",\n\t\t\"cdmActionTransactionIds\": [],\n\t\t\"scheduleIdentifier\": {\n\t\t\t\"agreementNumber\": \"1015682211\",\n\t\t\t\"scheduleNumber\": \"1\"\n\t\t},\n\t\t\"partyIdentifiers\": [{\n\t\t\t\"id\": \"\",\n\t\t\t\"idType\": \"MBID\"\n\t\t}],\n\t\t\"vehicleIdentifier\": \"\",\n\n\t\t\"eventObject\": \"\"\n\t}\n}"
+				},
+				"url": {
+					"raw": "https://dsi-mo.mbfs.usfdc.corpintra.net/ODM/MBFSOmnichannel/events",
+					"protocol": "https",
+					"host": [
+						"dsi-mo",
+						"mbfs",
+						"usfdc",
+						"corpintra",
+						"net"
+					],
+					"path": [
+						"ODM",
+						"MBFSOmnichannel",
+						"events"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://sfdct525w002.usfdc.corpintra.net:7080/ODM/MBFSOmnichannel/events",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n  \"$class\": \"com.mbfs.omnichannel.model.AccountChannelLogin\", \r\n  \"eventData\": { \r\n    \"systemId\": \"M1165\", \r\n    \"chnlAppType\": \"mobile\", \r\n    \"sourceIPAddress\": \"53.203.88.123\", \r\n    \"geolocation\": { \r\n      \"latitude\": 37.4442, \r\n      \"longitude\": -122.08585 \r\n    }, \r\n    \"eventDateTime\": \"2018-03-23T15:35:08.155Z\", \r\n    \"channelTransactionId\": \"7259752603623624\", \r\n    \"scheduleIdentifier\": { \r\n      \"agreementNumber\": \"5000084032\", \r\n      \"scheduleNumber\": \"1\" \r\n    }, \r\n    \"vehicleIdentifier\": \"1HGBH41JXMN109186\", \r\n    \"eventType\": \"AccountChannelLogin\", \r\n    \"eventResourceType\": \"account\", \r\n    \"partyIdentifiers\": [ \r\n      { \r\n        \"id\": \"1234\", \r\n        \"idType\": \"UCID\" \r\n      }, \r\n{ \r\n        \"id\": \"1234\", \r\n        \"idType\": \"UCID\" \r\n      } \r\n    ], \r\n   \"cdmActionTransactionIds\": [ \r\n      { \r\n        \"actionId\": \"7259752603623624\" \r\n      }, \r\n      { \r\n        \"actionId\": \"7259752603623625\" \r\n      } \r\n    ], \r\n   \"eventContexts\": [ \r\n      { \r\n        \"contextKey\": \"Contract-Lease-Expiry-Flag\", \r\n        \"contextValue\": \"False\" \r\n      }, \r\n      { \r\n        \"contextKey\": \"Contract-Lease-Expiry-Flag\", \r\n        \"contextValue\": \"False\" \r\n      } \r\n    ], \r\n    \"eventObject\": \"{'complexContext': 'Any JSON for capturing any additional input'}\" \r\n  } \r\n} "
+				},
+				"url": {
+					"raw": "http://sfdct525w002.usfdc.corpintra.net:7080/ODM/MBFSOmnichannel/events",
+					"protocol": "http",
+					"host": [
+						"sfdct525w002",
+						"usfdc",
+						"corpintra",
+						"net"
+					],
+					"port": "7080",
+					"path": [
+						"ODM",
+						"MBFSOmnichannel",
+						"events"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
